@@ -1,16 +1,18 @@
+import type { InboundWebhookPayload } from "@inboundemail/sdk";
 import { Hono } from "hono";
 
 const app = new Hono();
 
 app.get("/", (c) => {
 	const referer = c.req.header("Referer");
-	console.log(`GET / (from ${referer})`);
 	return c.text("Hello Hono!");
 });
 
-app.post("/", (c) => {
-	const referer = c.req.header("Referer");
-	console.log(`POST / (from ${referer})`);
+app.post("/", async (c) => {
+	const body = (await c.req.json()) as InboundWebhookPayload;
+
+	console.log(`${body.event} - ${body.timestamp}`);
+	console.log(body);
 	return c.text("Hello Hono!");
 });
 

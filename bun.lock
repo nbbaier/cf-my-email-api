@@ -4,6 +4,7 @@
     "": {
       "name": "cf-my-email-api",
       "dependencies": {
+        "@inboundemail/sdk": "^2.0.1",
         "hono": "^4.8.8",
       },
       "devDependencies": {
@@ -119,6 +120,8 @@
     "@img/sharp-win32-ia32": ["@img/sharp-win32-ia32@0.33.5", "", { "os": "win32", "cpu": "ia32" }, "sha512-T36PblLaTwuVJ/zw/LaH0PdZkRz5rd3SmMHX8GSmR7vtNSP5Z6bQkExdSK7xGWyxLw4sUknBuugTelgw2faBbQ=="],
 
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.33.5", "", { "os": "win32", "cpu": "x64" }, "sha512-MpY/o8/8kj+EcnxwvrP4aTJSWw/aZ7JIGR4aBeZkZw5B7/Jn+tY9/VNwtcoGmdT7GfggGIU4kygOMSbYnOrAbg=="],
+
+    "@inboundemail/sdk": ["@inboundemail/sdk@2.0.1", "", { "dependencies": { "@inboundemail/sdk": "^2.0.0" } }, "sha512-FXiOLo1/eWU6TB5lVfnk+z5VQWLfRohcQzVIbV8iwc9PWktWnfXbMe/bAx9dJ7FNyRcOBFGMBAxAiqTC8iV7kg=="],
 
     "@jridgewell/resolve-uri": ["@jridgewell/resolve-uri@3.1.2", "", {}, "sha512-bRISgCIjP20/tbWSPWMEi54QVPRZExkuD9lJL+UIxUKtwVJA8wW1Trb1jMs1RFXo1CBTNZ/5hpC9QvmKWdopKw=="],
 
