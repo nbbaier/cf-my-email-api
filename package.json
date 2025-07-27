@@ -1,19 +1,19 @@
 {
-  "name": "cf-my-email-api",
-  "type": "module",
-  "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
-  },
-  "dependencies": {
-    "@inboundemail/sdk": "^2.0.1",
-    "hono": "^4.8.8",
-    "resend": "^4.7.0"
-  },
-  "devDependencies": {
-    "@types/bun": "^1.2.19",
-    "@types/node": "^24.1.0",
-    "wrangler": "^4.4.0"
-  }
+	"name": "cf-my-email-api",
+	"type": "module",
+	"scripts": {
+		"dev": "wrangler dev",
+		"deploy": "wrangler deploy --minify",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"@inboundemail/sdk": "^2.0.1",
+		"hono": "^4.8.8",
+		"resend": "^4.7.0"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.19",
+		"@types/node": "^24.1.0",
+		"wrangler": "^4.4.0"
+	}
 }

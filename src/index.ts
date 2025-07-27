@@ -1,7 +1,4 @@
-import {
-	type InboundWebhookPayload,
-	isInboundWebhook,
-} from "@inboundemail/sdk";
+import { isInboundWebhook } from "@inboundemail/sdk";
 import { Hono } from "hono";
 import { Resend } from "resend";
 
@@ -11,9 +8,9 @@ app.get("/", async (c) => {
 	const resend = new Resend(c.env.RESEND_API_KEY);
 
 	const { data, error } = await resend.emails.send({
-		from: "Some name <buddy@mail-to-ai.com>",
+		from: "Agent <agent@mail-to-ai.com>",
 		to: "nico.baier@gmail.com",
-		subject: "Hello World",
+		subject: "Hello World!!",
 		html: "<p>Hello from Workers</p>",
 	});
 
@@ -22,7 +19,6 @@ app.get("/", async (c) => {
 
 app.post("/", async (c) => {
 	const resend = new Resend(c.env.RESEND_API_KEY);
-
 	const payload = await c.req.json();
 
 	if (!isInboundWebhook(payload)) {
